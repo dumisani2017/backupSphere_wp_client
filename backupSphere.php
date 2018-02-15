@@ -24,7 +24,7 @@ register_deactivation_hook( __FILE__, array( 'backupSphere', 'plugin_deactivatio
 
 require_once( BACKUPSHERE__PLUGIN_DIR . 'class.backupSphere.php' );
 require_once( BACKUPSHERE__PLUGIN_DIR . 'class.backupSphere-rest-api.php' );
-require_once (BLOGBOOSTER__PLUGIN_DIR .'/views/menu.php');
+require_once (BACKUPSHERE__PLUGIN_DIR .'/views/menu.php');
 
 
 add_action( 'admin_menu', 'backupSphere_register_my_custom_menu_page' );
