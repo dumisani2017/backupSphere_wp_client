@@ -174,12 +174,31 @@
 			    $zip->addFromString(basename($source), file_get_contents($source));
 			}
 
-		}
-
+		
 		    return $zip->close();
 
 		}
+	}
+
+
+	//
+	public function insert_to_backupShere($a_name, $backup_status, $backup_size){
+
+		global $wpdb;
+
+		$tablename = $wpdb->prefix . 'backupSphere';
+
+		$sql = "INSERT INTO {$tablename}
+        (admin_name, status, size ) values ('$a_name',$backup_status,$backup_size)";
+
+    	$wpdb->query($sql); 
+
+    	echo $wpdb->last_error; 
+
 
 	}
+
+}
+		
 
 
